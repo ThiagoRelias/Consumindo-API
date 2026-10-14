@@ -1,13 +1,17 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Welcome() {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
-      <View style={styles.banner} />
+      <Image 
+        source={{ uri: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000&auto=format&fit=crop' }} 
+        style={styles.banner} 
+        resizeMode="cover"
+      />
       <Text style={styles.logo}>SENAIFLIX</Text>
       <Text style={styles.sub}>Filmes e séries ilimitados. Assista onde quiser.</Text>
 
@@ -51,7 +55,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   buttonText: { color: '#fff',
-    fontWeight: '700',
-    fontSize: 16
-  },
+     fontWeight: '700',
+      fontSize: 16
+     },
 });
